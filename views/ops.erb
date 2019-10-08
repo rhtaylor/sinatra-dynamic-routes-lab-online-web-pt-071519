@@ -5,10 +5,18 @@
 
     </head>
     <body>
-      <% raise params.inspect %>
-      <% x = params[:number].to_i %>
-        <% abc =  x ** 2 %>
-        <h1><%= abc %><h1>
+      <% z = params[:num2].to_i %>
+      <% y = params[:num1].to_i %>
+      <% x = params[:op] %>
+        <% if x == "multiply" %>
+        <%   a =  y * z  %> 
+        <% elsif x == "divide" %> 
+        <%   a = y / x   %> 
+        <% elsif x == "add" %> 
+        <%   a =  y + z  %> 
+        <% elsif x == "subtract" %> 
+        <%  a =  y - z   %>
+        <h1><%= a %><h1>
         <p>This is a NOT a static url</p>
     </body>
 </html>
